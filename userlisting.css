@@ -1,0 +1,66 @@
+
+#Logoutbtn{
+    cursor: pointer;
+    padding: 20px;
+}
+
+table{
+    box-sizing: border-box;
+    border-collapse: collapse;
+    text-indent: initial;
+    border: 2px solid #F6F7FB;
+}
+td,th{
+    padding: 15px 40px;
+    width: 10%;
+    width: 10%;
+    font-size: 14px;
+    text-align: left;
+}
+
+tbody tr{
+    background-color: #fff;
+    border-bottom: 4px solid #f6f7fb;
+}
+
+#SearchDiv{
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    font-size: 15px;
+    margin:10px 50px 36px 0;
+}
+
+.fa-times{
+    position: absolute;
+    right:7px;
+    top:7px;
+    width: 8px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+input[type="text"]{
+    border: none;
+    width:100%;
+    box-sizing: border-box;
+    padding: 12px 24px;
+    font-size: 15px;
+    border: 0;
+    border-bottom: 2px solid #8c8c8c;
+    margin: 0 36px 0 0;
+    outline: none;
+}
+
+#Resetbtn{
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #20b883;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
