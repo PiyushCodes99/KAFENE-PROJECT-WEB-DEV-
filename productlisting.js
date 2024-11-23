@@ -7,14 +7,20 @@ $(document).ready(()=>{
         expired:true,
         lowStock:true
     }
+    // const logoutbtn=$("#Logoutbtn")
+    
+    
+    // logoutbtn.click(()=>{
+    //     localStorage.setItem("LoggedIn",false)
+    //     window.location.assign("../index.html")
+    // })
+
     const logoutbtn=$("#Logoutbtn")
-    
-    
     logoutbtn.click(()=>{
         localStorage.setItem("LoggedIn",false)
-        window.location.assign("../index.html")
+        window.location.assign("./landingpage.html")
     })
-
+    
     const createTableRow=(id,name,brand,date,price,stock)=>{
         const row=$("<tr>")
         const prodid=$("<td>").text(id).css("color","#8c8c8c")
