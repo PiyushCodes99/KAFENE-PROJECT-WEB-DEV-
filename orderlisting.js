@@ -1,6 +1,7 @@
 $(document).ready(()=>{
     const tablebody=$("tbody");
-    const url="https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/orders";
+    // const url="https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/orders";
+    const url="https://679f3a8624322f8329c31cf2.mockapi.io/api/v1/orders";
     const checkbox=$("#FilterSection input")
     let orderdetails=[];
     let checked={
@@ -28,6 +29,8 @@ $(document).ready(()=>{
 
     $.get(url,(resp)=>{
         orderdetails=resp;
+        $("#OrderCount").text(orderdetails.length);
+
         resp.map(order =>{
             const createdRow=createTableRow(order.id,order.customerName,`${order.orderDate} ${order.orderTime}`,order.amount,order.orderStatus)
             tablebody.append(createdRow);
