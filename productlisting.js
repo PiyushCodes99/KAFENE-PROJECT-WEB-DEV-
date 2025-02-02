@@ -18,7 +18,7 @@ $(document).ready(()=>{
     const logoutbtn=$("#Logoutbtn")
     logoutbtn.click(()=>{
         localStorage.setItem("LoggedIn",false)
-        window.location.assign("./landingpage.html")
+        window.location.assign("./login-page.html")
     })
     
     const createTableRow=(id,name,brand,date,price,stock)=>{
@@ -47,20 +47,20 @@ $(document).ready(()=>{
         tablebody.text("");
         checked[e.target.name]=e.target.checked;
         let count=0;
-             if(checked.expired==false && checked.lowStock==true){
+             if(checked.expired==true && checked.lowStock==false){
                 console.log("case1")
                 proddetails.map(product=>{
                     
-                    if(new Date(product.expiryDate)>new Date())  {         
+                    if(new Date(product.expiryDate) < new Date())  {         
                     let createdRow=createTableRow(product.id,product.medicineName,product.medicineBrand,product.expiryDate,product.unitPrice,product.stock)
                     count++;
                     tablebody.append(createdRow);
                     }
                 })
              }
-             else if(checked.expired==true && checked.lowStock==false){
+             else if(checked.expired==false && checked.lowStock==true){
                 proddetails.map(product=>{
-                    if(product.stock>=100)  {       
+                    if(product.stock <= 100)  {       
                     let createdRow=createTableRow(product.id,product.medicineName,product.medicineBrand,product.expiryDate,product.unitPrice,product.stock)
                     count++;
                     tablebody.append(createdRow);

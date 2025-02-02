@@ -10,7 +10,7 @@ $(document).ready(()=>{
     
     logoutbtn.click(()=>{
         localStorage.setItem("LoggedIn",false)
-        window.location.assign("./landingpage.html")
+        window.location.assign("./login-page.html")
     })
 
     const createTableRow=(id,avatar,name,dob,gender,location)=>{

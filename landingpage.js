@@ -1,5 +1,3 @@
-
-
 $(document).ready(()=>{
 
     console.log(localStorage.getItem("LoggedIn")=="true")
@@ -7,7 +5,7 @@ $(document).ready(()=>{
     localStorage.getItem("LoggedIn")=="true"?window.location.assign("./orderlisting.html"):loginform.style.display="block";
     loginform.addEventListener("submit",(e)=>{
         e.preventDefault();
-        if(e.target.Username.value==e.target.Password.value){
+        if(e.target.Username.value=="ashu" && e.target.Password.value =="ashu"){
             window.alert("Login Successful")
             localStorage.setItem("LoggedIn",true)
             window.location.assign("./orderlisting.html")
