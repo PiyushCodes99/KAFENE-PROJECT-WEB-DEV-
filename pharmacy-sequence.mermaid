@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant U as User
+    participant A as Auth Module
+    participant O as Order Module
+    participant D as Database
+    
+    U->>A: Login Request
+    A->>D: Validate Credentials
+    D-->>A: Validation Result
+    A-->>U: Auth Token
+    
+    U->>O: View Orders
+    O->>D: Fetch Orders
+    D-->>O: Order Data
+    O-->>U: Display Orders
+    
+    U->>O: Apply Filter
+    O->>D: Filter Query
+    D-->>O: Filtered Results
+    O-->>U: Update Display
